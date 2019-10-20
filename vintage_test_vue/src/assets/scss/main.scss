@@ -1,0 +1,189 @@
+// тк мы к ним обращаемся везде ниже
+@import "utils/vars";
+@import "utils/reset";
+
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: 
+       url('~@/assets/fonts/SuisseIntl.woff') format('woff'),
+       url('~@/assets/fonts/SuisseIntl.woff2') format('woff2');
+       
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: 
+       url('~@/assets/fonts/SuisseIntl-Light.woff') format('woff'),
+       url('~@/assets/fonts/SuisseIntl-Light.woff2') format('woff2');
+       
+  font-weight: 300; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: 
+       url('~@/assets/fonts/SuisseIntl-SemiBold.woff') format('woff'),
+       url('~@/assets/fonts/SuisseIntl-SemiBold.woff2') format('woff2');
+       
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 14px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1280px!important;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+h1 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 48px;
+}
+h2 {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 48px;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 20px;
+  line-height: 36px;
+}
+
+
+
+input, textarea, select, button { border: 1px solid $border-base; }
+
+a {
+	text-decoration: none;
+}
+
+p {
+  font-weight:300;
+}
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section, .section {
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 20px 0;
+  }
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &.wrapper-content--fixed {
+    margin-top: 80px;
+  }
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: 380px;
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+    max-width: 320px;
+  }
+}
+
+.additionalColor {
+  color: #3db565;
+}
+
+input:focus {
+  box-shadow: none;
+  color: #ffffff;
+  border:none;
+}
+
+.input-group .form-control {
+  box-shadow: none!important;
+   border:none!important;
+}
+.has-error .form-control {
+  color: #a94442!important;
+}
+
+.has-success  .form-control {
+  color:#ffffff!important;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent!important;
+}
+
+input:-webkit-autofill {
+  background-color: #FAFFBD !important;
+}
+
+// @import "./common.scss";
+// @import "./animate.min.css";
